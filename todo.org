@@ -1,18 +1,19 @@
 * CURRENT
-** TODO git
+** DONE git
+   CLOSED: [2014-12-16 Tue 14:24]
 ** TODO content management POC
-** TODO add bootstrap
+** DONE add bootstrap
+   CLOSED: [2014-12-16 Tue 14:30]
 ** DONE readme
    CLOSED: [2014-12-16 Tue 14:20]
 *** DONE description
     CLOSED: [2014-12-16 Tue 14:17]
 *** DONE how to run
     CLOSED: [2014-12-16 Tue 14:20]
-** DONE testing?
-   CLOSED: [2014-12-16 Tue 14:10]
 ** TODO add collections
 *** TODO bounties
-*** TODO users
+*** DONE users
+    CLOSED: [2014-12-16 Tue 15:04]
 *** TODO responses
 *** TODO badges
 ** TODO set up a router

@@ -4,9 +4,13 @@
 # but you can also edit it by hand.
 
 meteor-platform
-mike:mocha
-meteorhacks:npm
 
+mizzao:bootstrap-3
+chrismbeckett:fontawesome4
+accounts-base
+accounts-password
+iron:router
+yogiben:admin
+aldeed:collection2
+aldeed:autoform
 
-
-npm-container
