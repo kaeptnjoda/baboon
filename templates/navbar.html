@@ -1,0 +1,35 @@
+<template name="navbar">
+  <nav class="navbar navbar-default">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">Ethereum bughunting hub</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signup-modal">
+                Sign up
+              </button>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+              <div class="dropdown-menu panel panel-default">
+                <div class="panel-body">
+                  <form method="post" action="login" accept-charset="UTF-8">
+                    <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+                    <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+                    <button class="btn btn-default btn-block">
+                      Sign in
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</template>

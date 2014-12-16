@@ -13,4 +13,6 @@ meteor
 
 ## Project structure
 
-Any code inside the `server/` directory is only loaded on the server while any code inside the `client/` directory will only be loaded on the client. Anything outside of these dirs will be loaded on both sides, but it's best to be explicit with such matters so any shared code should be kept in "shared/"
+Any code inside the `server/` directory is only loaded on the server while any code inside the `client/` directory will only be loaded on the client. Anything outside of these dirs will be loaded on both sides, but it's best to be explicit with such matters so any shared code should be kept in `shared/`
+
+Also, Meteor has a very bizzare file loading order: anything you put inside a `lib` folder will be loaded before anything else in the directory, while a file called `main.js` will be loaded last. This is useful to keep in mind when making any global declarations.

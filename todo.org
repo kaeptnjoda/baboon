@@ -10,18 +10,25 @@
     CLOSED: [2014-12-16 Tue 14:17]
 *** DONE how to run
     CLOSED: [2014-12-16 Tue 14:20]
+** TODO set up basic password signup
+*** DONE navbar
+    CLOSED: [2014-12-16 Tue 19:02]
+*** DONE UI
+    CLOSED: [2014-12-16 Tue 19:03]
+*** DONE backend
+    CLOSED: [2014-12-16 Tue 19:15]
+** TODO basic sign in
 ** TODO add collections
 *** TODO bounties
 *** DONE users
     CLOSED: [2014-12-16 Tue 15:04]
 *** TODO responses
-*** TODO badges
-** TODO set up a router
-** TODO basic pages
-*** TODO home
-*** TODO browse bounties
-*** TODO leaderboard
-*** TODO user section
+*** DONE badges
+    CLOSED: [2014-12-16 Tue 16:27]
+** DONE set up a router
+   CLOSED: [2014-12-16 Tue 19:02]
+** TODO signup validation
+** TODO signup error handler
 * LATER
 ** TODO build a deploy pipeline
 *** TODO aws box (small?)
