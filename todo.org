@@ -1,0 +1,30 @@
+* CURRENT
+** TODO git
+** TODO content management POC
+** TODO add bootstrap
+** DONE readme
+   CLOSED: [2014-12-16 Tue 14:20]
+*** DONE description
+    CLOSED: [2014-12-16 Tue 14:17]
+*** DONE how to run
+    CLOSED: [2014-12-16 Tue 14:20]
+** DONE testing?
+   CLOSED: [2014-12-16 Tue 14:10]
+** TODO add collections
+*** TODO bounties
+*** TODO users
+*** TODO responses
+*** TODO badges
+** TODO set up a router
+** TODO basic pages
+*** TODO home
+*** TODO browse bounties
+*** TODO leaderboard
+*** TODO user section
+* LATER
+** TODO build a deploy pipeline
+*** TODO aws box (small?)
+*** TODO new relic
+*** TODO ? mongohq
+*** TODO ? pm2
+*** TODO ? wercker
