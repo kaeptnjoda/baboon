@@ -1,5 +1,5 @@
 Template.signupModal.events({
-  "click #btn-signup": function(e, tmpl){
+  "click [btn-signup]": function(e, tmpl){
     var username = $("#signup-modal [name=email]").val(),
         password = $("#signup-modal [name=password]").val();
     //TODO: validation

@@ -1,7 +1,35 @@
 * CURRENT
+** TODO add collections
+*** TODO bounties
+*** DONE users
+    CLOSED: [2014-12-16 Tue 15:04]
+*** TODO responses
+*** DONE badges
+    CLOSED: [2014-12-16 Tue 16:27]
+** TODO signup validation
+** TODO signup error handler
+** TODO schema for users
+** TODO leaderboard
+*** TODO section
+*** TODO list users
+*** TODO show badges
+** TODO better cms support for images
+* LATER
+** TODO devise a deploy pipeline
+*** TODO aws box (small?)
+*** TODO new relic
+*** TODO ? mongohq
+*** TODO ? pm2
+*** TODO ? wercker
+* ARCHIVE
 ** DONE git
    CLOSED: [2014-12-16 Tue 14:24]
-** TODO content management POC
+** DONE content management POC
+   CLOSED: [2014-12-17 Wed 19:03]
+*** DONE fix errors
+    CLOSED: [2014-12-17 Wed 19:03]
+*** DONE admin link in nav
+    CLOSED: [2014-12-17 Wed 19:03]
 ** DONE add bootstrap
    CLOSED: [2014-12-16 Tue 14:30]
 ** DONE readme
@@ -10,29 +38,22 @@
     CLOSED: [2014-12-16 Tue 14:17]
 *** DONE how to run
     CLOSED: [2014-12-16 Tue 14:20]
-** TODO set up basic password signup
+** DONE set up basic password signup
+   CLOSED: [2014-12-17 Wed 19:03]
 *** DONE navbar
     CLOSED: [2014-12-16 Tue 19:02]
 *** DONE UI
     CLOSED: [2014-12-16 Tue 19:03]
 *** DONE backend
     CLOSED: [2014-12-16 Tue 19:15]
-** TODO basic sign in
-** TODO add collections
-*** TODO bounties
-*** DONE users
-    CLOSED: [2014-12-16 Tue 15:04]
-*** TODO responses
-*** DONE badges
-    CLOSED: [2014-12-16 Tue 16:27]
+** DONE basic auth
+   CLOSED: [2014-12-17 Wed 18:49]
+*** DONE sign up
+    CLOSED: [2014-12-17 Wed 17:31]
+*** DONE sign in
+    CLOSED: [2014-12-17 Wed 18:49]
+*** DONE sign out
+    CLOSED: [2014-12-17 Wed 18:49]
+
 ** DONE set up a router
    CLOSED: [2014-12-16 Tue 19:02]
-** TODO signup validation
-** TODO signup error handler
-* LATER
-** TODO build a deploy pipeline
-*** TODO aws box (small?)
-*** TODO new relic
-*** TODO ? mongohq
-*** TODO ? pm2
-*** TODO ? wercker
