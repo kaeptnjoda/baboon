@@ -11,3 +11,10 @@
   }
 }));
 
+if(Meteor.isServer){
+  Meteor.publish("badges", function(){
+    return Badges.find();
+  });
+}else{
+  Meteor.subscribe("badges");
+}

@@ -1,13 +1,15 @@
 Template.signupModal.events({
-  "click [btn-signup]": function(e, tmpl){
-    var username = $("#signup-modal [name=email]").val(),
-        password = $("#signup-modal [name=password]").val();
+  "submit form": function(e, tmpl){
+    e.preventDefault();
+    
+    var email = tmpl.$("[name=email]").val(),
+        password = tmpl.$("[name=password]").val();
     //TODO: validation
 
     Accounts.createUser({
-      username: username,
+      username: email,
       password: password,
-      email: username
+      email: email
     }, function(err){
       if(err){
         Session.set("signupError", err);

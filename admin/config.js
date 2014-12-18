@@ -1,8 +1,13 @@
 AdminConfig = {
   name: "Baboon",
-  adminEmails: ["konstantin@ethdev.com"],
+  adminEmails: ["konstantin@ethdev.com", "bob@bob.com"],
+  dashboard: {
+    skin: "blue"
+  },
   collections: {
     Badges: {},
-    Users: {}
+    Users: {
+      
+    }
   }
 };

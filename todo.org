@@ -1,19 +1,42 @@
 * CURRENT
-** TODO add collections
+** TODO base schemas
 *** TODO bounties
 *** DONE users
-    CLOSED: [2014-12-16 Tue 15:04]
+    CLOSED: [2014-12-18 Thu 14:56]
 *** TODO responses
 *** DONE badges
     CLOSED: [2014-12-16 Tue 16:27]
+** TODO admin
+*** TODO better cms support for images
+*** DONE dropdowns for relations
+    CLOSED: [2014-12-18 Thu 17:10]
+*** TODO configure table columns
 ** TODO signup validation
 ** TODO signup error handler
-** TODO schema for users
-** TODO leaderboard
-*** TODO section
-*** TODO list users
-*** TODO show badges
-** TODO better cms support for images
+** DONE leaderboard
+   CLOSED: [2014-12-18 Thu 18:35]
+*** DONE section
+    CLOSED: [2014-12-18 Thu 18:35]
+*** DONE list users
+    CLOSED: [2014-12-18 Thu 18:35]
+*** DONE show badges
+    CLOSED: [2014-12-18 Thu 18:35]
+** TODO bounties
+** TODO github login
+** TODO clear signup form
+** TODO email verification
+*** TODO send email
+*** DONE disable login if not verified
+    CLOSED: [2014-12-18 Thu 14:24]
+*** DONE verify link
+    CLOSED: [2014-12-18 Thu 13:56]
+*** DONE enable login for verified
+    CLOSED: [2014-12-18 Thu 14:29]
+*** TODO confirmation text
+*** TODO please validate text
+*** DONE fix admin login
+    CLOSED: [2014-12-18 Thu 14:41]
+*** TODO autoform user signup
 * LATER
 ** TODO devise a deploy pipeline
 *** TODO aws box (small?)
