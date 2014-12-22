@@ -1,0 +1,29 @@
+<template name="bounties">
+  <section id="bounties" class="row">
+    <h1>Open bounties</h1>
+    {{#each bounties }}
+      <h2>{{title}}</h2>
+      <h3>{{ethId}}</h3>
+      <div class="bounty-description">
+        {{description}}
+      </div>
+      <div class="bounty-score">
+        <label>
+          Score:
+        </label>
+        <span>{{score}}</span>
+      </div>      
+      <div class="bounty-value">
+        <label>
+          Value:
+        </label>
+        <span>${{valueUsd}}</span>
+      </div>
+      <div class="panel">
+        {{#each leader.badges }}
+          {{> badgeImage badge }}
+        {{/each}}
+      </div>
+    {{/each}}
+  </section>
+</template>

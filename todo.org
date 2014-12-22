@@ -1,11 +1,4 @@
 * CURRENT
-** TODO base schemas
-*** TODO bounties
-*** DONE users
-    CLOSED: [2014-12-18 Thu 14:56]
-*** TODO responses
-*** DONE badges
-    CLOSED: [2014-12-16 Tue 16:27]
 ** TODO admin
 *** TODO better cms support for images
 *** DONE dropdowns for relations
@@ -22,6 +15,14 @@
 *** DONE show badges
     CLOSED: [2014-12-18 Thu 18:35]
 ** TODO bounties
+*** DONE schema
+    CLOSED: [2014-12-19 Fri 15:51]
+*** DONE list on the homepage
+    CLOSED: [2014-12-19 Fri 16:58]
+*** TODO per-bounty pages
+*** DONE bounty admin
+    CLOSED: [2014-12-19 Fri 16:06]
+*** TODO submit a vulnerability page
 ** TODO github login
 ** TODO clear signup form
 ** TODO email verification
@@ -37,6 +38,7 @@
 *** DONE fix admin login
     CLOSED: [2014-12-18 Thu 14:41]
 *** TODO autoform user signup
+** TODO add a favicon
 * LATER
 ** TODO devise a deploy pipeline
 *** TODO aws box (small?)

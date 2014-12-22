@@ -10,8 +10,5 @@ Template.leaderboard.helpers({
         leader: user
       };
     });
-  },
-  badgeImageUrl: function(id){
-    return Badges.findOne(id).imageUrl;
   }
 });

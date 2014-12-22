@@ -5,9 +5,8 @@ AdminConfig = {
     skin: "blue"
   },
   collections: {
+    Users: {},
     Badges: {},
-    Users: {
-      
-    }
+    Bounties: {}
   }
 };

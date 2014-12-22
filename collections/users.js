@@ -78,7 +78,6 @@ Meteor.users.attachSchema(new SimpleSchema({
 
 if(Meteor.isServer){
   Meteor.publish("userData", function(){
-    console.log(Meteor.users.find({_id: this.userId}).fetch());
     return Meteor.users.find({_id: this.userId});
   });
   Meteor.publish("allUserData", function(){

@@ -1,20 +1,11 @@
-//TODO: see if this chains
-
-(Badges = new Mongo.Collection("badges")).attachSchema(new SimpleSchema({
+Badges = Collections.create("badges", {
   imageUrl: {
     type: String,
-    label: "url"
+    label: "image url"
   },
   name: {
     type: String,
     label: "name"
   }
-}));
+});
 
-if(Meteor.isServer){
-  Meteor.publish("badges", function(){
-    return Badges.find();
-  });
-}else{
-  Meteor.subscribe("badges");
-}
