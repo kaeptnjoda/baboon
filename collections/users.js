@@ -24,14 +24,8 @@ Meteor.users.attachSchema(new SimpleSchema({
   },
   profile: {
     type: new SimpleSchema({
-      firstName: {
+      name: {
         type: String,
-        regEx: /^[a-zA-Z-]{2,25}$/,
-        optional: true
-      },
-      lastName: {
-        type: String,
-        regEx: /^[a-zA-Z]{2,25}$/,
         optional: true
       }
     }),
