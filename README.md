@@ -37,4 +37,5 @@ meteor --settings config/settings.json
 
 ### Github login
 
-The website supports Github signup but you'll need to register an application on Github first if you want to try it out locally. Go to `https://github.com/settings/applications` and click "Register new application". Fill in the fields with pretty much anything except for the callback one: this needs to be your localhost address, e.g. `http://localhost:3000`
+The website supports Github signup but you'll need to register an application on Github first if you want to try it out locally. Go to `https://github.com/settings/applications` and click "Register new application". Fill in the fields with pretty much anything except for the callback one: this needs to be your localhost address, e.g. `http://localhost:3000`. Click "Register application". You're alsmost done. Now copy the client ID and client secret into your `config/settings.json` file as values for `githubClientId` and `githubSecret` respectively. Github login should work for you now.
+
