@@ -4,7 +4,8 @@
 *** DONE dropdowns for relations
     CLOSED: [2014-12-18 Thu 17:10]
 *** TODO configure table columns
-** TODO signup validation
+** TODO signup improvements
+*** TODO autoform user signup
 ** TODO signup error handler
 ** DONE leaderboard
    CLOSED: [2014-12-18 Thu 18:35]
@@ -23,6 +24,7 @@
 *** DONE bounty admin
     CLOSED: [2014-12-19 Fri 16:06]
 *** TODO submit a vulnerability page
+*** TODO bounty badges
 ** TODO github login
 ** TODO clear signup form
 ** TODO email verification
@@ -37,8 +39,9 @@
 *** TODO please validate text
 *** DONE fix admin login
     CLOSED: [2014-12-18 Thu 14:41]
-*** TODO autoform user signup
-** TODO add a favicon
+** DONE add a favicon
+   CLOSED: [2014-12-28 Sun 14:48]
+** TODO trello board
 * LATER
 ** TODO devise a deploy pipeline
 *** TODO aws box (small?)
@@ -46,6 +49,8 @@
 *** TODO ? mongohq
 *** TODO ? pm2
 *** TODO ? wercker
+* USEFUL STUFF
+** admin settings: admin/config.js
 * ARCHIVE
 ** DONE git
    CLOSED: [2014-12-16 Tue 14:24]
