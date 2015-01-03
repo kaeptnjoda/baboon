@@ -7,6 +7,6 @@ AdminConfig = {
   collections: {
     Users: {},
     Badges: {},
-    Bounties: {}
+    Vulnerabilities: {}
   }
 };

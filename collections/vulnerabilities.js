@@ -1,4 +1,4 @@
-Bounties = Collections.create("bounties", {
+Vulnerabilities = Collections.create("vulnerabilities", {
   ethId: {
     type: String,
     label: "Ethereum security ID"
