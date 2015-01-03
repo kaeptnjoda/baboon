@@ -1,0 +1,63 @@
+<template name="openBountiesStatic">
+  <section class="row">
+    <h1>Open Bounties</h1>
+    <h2>Protocol security</h2>
+    <ul>
+      <li>Conceptual security issues in the formal specification of the Ethereum protocol.</li>
+      <li>Misaligned / unintended incentives. Flaws in game theory.</li>
+      <li>Security weaknesses / attacks on the PoW algorithm.</li>
+    </ul>
+    <h2>Client protocol implementation security</h2>
+    Whether the Go client implementation conforms to the formal protocol specification:
+    <ul>
+      <li>Validations of blocks, transactions and messages.</li>
+      <li>Ethereum Virtual Machine code execution.</li>
+      <li>Transaction execution.</li>
+      <li>Contract creation.</li>
+      <li>Message calls.</li>
+      <li>Calculation and enforcement of gas and fees.</li>
+    </ul>
+    Bitcoin "zero-day" example requiring a hard-fork: <a href="https://en.bitcoin.it/wiki/CVE-2010-5139">https://en.bitcoin.it/wiki/CVE-2010-5139</a>
+    <h2>Network security</h2>
+    Generalized attacks on the whole network or a subset of it:
+    <ul>
+      <li>51% and other X% attacks.</li>
+      <li>Finney attacks.</li>
+      <li>Sybil attacks.</li>
+      <li>Replay attacks.</li>
+      <li>Transaction / messages malleability.</li>
+      <li>(global) DoS.</li>
+    </ul>
+    Global DoS example: <a href="https://en.bitcoin.it/wiki/CVE-2012-4684">https://en.bitcoin.it/wiki/CVE-2012-4684</a>
+    <h2>Node security</h2>
+    Attacks on a single Go client relating to the Ethereum protocol:
+    <ul>
+      <li>DoS / resource abuse.</li>
+      <li>Account / wallet address gathering/probing.</li>
+      <li>Broadcast / withhold attacks.</li>
+    </ul>
+    DoS example: <a href="https://bitcointalk.org/index.php?topic=287351">https://bitcointalk.org/index.php?topic=287351</a>
+    <br>
+    DoS / Resource abuse example: <a href="https://en.bitcoin.it/wiki/CVE-2013-2293">https://en.bitcoin.it/wiki/CVE-2013-2293</a>
+    <h2>Client application security</h2>
+    Attacks on a single Go client exposing general Go application or library vulnerabilities:
+    <ul>
+      <li>Memory vulnerability (invalid memory address, nil pointers, memory not properly released).</li>
+      <li>Data type (e.g. integer) overflows / wrap arounds.</li>
+      <li>Panics or not properly handled errors.</li>
+      <li>Concurrency: synchronization, state, races.</li>
+      <li>Issues related to external libraries used.</li>
+    </ul>
+    External library example: <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/</a>
+    <h2>Cryptographic primitives security</h2>
+    Incorrect implementation / usage / configuration of:
+    <ul>
+      <li>Elliptic curve (secp256k1, ECDSA).</li>
+      <li>Hash algorithms (Keccak-256).</li>
+      <li>Merkle Patricia Trees.</li>
+    </ul>
+    EC key generation example: <a href="http://www.reddit.com/r/Bitcoin/comments/2onm5r/blockchaininfo_security_disclosure/">http://www.reddit.com/r/Bitcoin/comments/2onm5r/blockchaininfo_security_disclosure/</a>
+    <br>
+    (<a href="https://github.com/blockchain/My-Wallet/commit/98d5a7ca59ef04d06ac6aee468634b12975a0f5c">https://github.com/blockchain/My-Wallet/commit/98d5a7ca59ef04d06ac6aee468634b12975a0f5c</a>)
+  </section>
+</template>
