@@ -1,44 +1,46 @@
 <template name="leaderboard">
-  <section class="row" id="leaderboard">
-    <div class="col-md-1">
-    </div>
-    <div class="col-md-10">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h1>Leaderboard</h1>
-        </div>
-        {{#if leaders}}
-          <table class="table table-striped">
-            {{#each leaders}}
-              <tr>
-                <td>
-                  {{i}}
-                </td>
-                <td class="center-aligned">
-                  <img src="{{leader.avatarUrl}}"/>
-                </td>
-                <td class="left-aligned">
-                  {{leader.username}}
-                </td>
-                <td class="right-aligned">
-                  {{leader.points}}
-                </td>
-                <td class="right-aligned">
-                  {{#each leader.badges }}
-                    {{> badgeImage badge }}
-                  {{/each}}
-                </td>
-              </tr>
-            {{/each}}
-          </table>
-        {{else}}
-          <p>
-            There currently are no bounty hunters
-          </p>
-        {{/if}}
+  <section id="leaderboard">
+    <div class="container">
+      <div class="col-md-1">
       </div>
-    </div>
-    <div class="col-md-1">
+      <div class="col-md-10">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h1>Leaderboard</h1>
+          </div>
+          {{#if leaders}}
+            <table class="table table-striped">
+              {{#each leaders}}
+                <tr>
+                  <td>
+                    {{i}}
+                  </td>
+                  <td class="center-aligned">
+                    <img src="{{leader.avatarUrl}}"/>
+                  </td>
+                  <td class="left-aligned">
+                    {{leader.username}}
+                  </td>
+                  <td class="right-aligned">
+                    {{leader.points}}
+                  </td>
+                  <td class="right-aligned">
+                    {{#each leader.badges }}
+                      {{> badgeImage badge }}
+                    {{/each}}
+                  </td>
+                </tr>
+              {{/each}}
+            </table>
+          {{else}}
+            <p>
+              There currently are no bounty hunters
+            </p>
+          {{/if}}
+        </div>
+      </div>
+      <div class="col-md-1">
+      </div>
     </div>
   </section>
 </template>
