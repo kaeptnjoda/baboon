@@ -2,9 +2,9 @@
 
 Collections = {
   create: function(name, schema, opt){
-    opt = opt || {
+    opt = _.extend({
       autoPublish: true
-    };
+    }, opt);
 
     var collection =  new Mongo.Collection(name);
     

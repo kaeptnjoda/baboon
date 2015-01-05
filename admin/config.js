@@ -7,6 +7,21 @@ AdminConfig = {
   collections: {
     Users: {},
     Badges: {},
-    Vulnerabilities: {}
+    Vulnerabilities: {
+      tableColumns: [{
+        label: "Date",
+        name: "createdAt"
+      }, {
+        label: "Accepted",
+        name: "accepted"
+      },{
+        label: "User",
+        name: "user",
+        collection: "Users"
+      }, {
+        label: "Title",
+        name: "title"
+      }]
+    }
   }
 };

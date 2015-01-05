@@ -1,0 +1,14 @@
+<template name="feedback">
+  {{#if feedback}}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert {{ feedback.type }}">
+            <strong>{{feedback.primary}}</strong>
+            <span>{{feedback.secondary}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+</template>

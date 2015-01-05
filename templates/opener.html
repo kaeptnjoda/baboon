@@ -1,0 +1,28 @@
+<template name="opener">
+  <section id="opener">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <strong>TODO: logo image</strong>
+        </div>
+        <div class="col-md-6">
+          <h1>Ethereum Bounty Program</h1>
+          <p class="text-justify">
+            Take part in securing the Ethereum platform. Earn cold hard cash for finding a vulnerability, and get a place on our leaderboard, as well as a personal entry in the Ethereum genesis block.
+          </p>
+          <div class="btn-container text-center">
+            {{#if currentUser}}
+              {{#linkTo route="newVulnerability" class="btn btn-default"}}
+                Submit a Vulnerability
+              {{/linkTo}}
+            {{else}}
+              <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signup-modal">
+                Sign up to submit a vulnerability
+              </button>              
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
