@@ -1,5 +1,5 @@
 <template name="signupModal">
-  <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog">
+  <div class="modal" id="signup-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <form>
@@ -9,11 +9,20 @@
               <input type="email" name="email" class="form-control" id="signup-email" placeholder="Enter email">
             </div>
             <div class="form-group">
+              <label for="signup-username">User</label>
+              <input type="username" name="username" class="form-control" id="signup-username" placeholder="Optional - can be left empty">
+            </div>
+            <div class="form-group">
               <label for="signup-password">Password</label>
-              <input type="password" name="password" class="form-control" id="signup-email" placeholder="Enter password">
+              <input type="password" name="password" class="form-control" id="signup-password" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+              <label for="signup-password-confirm">Confirm Password</label>
+              <input type="password" name="password-confirm" class="form-control" id="signup-password-confirm" placeholder="Enter password again">
             </div>
           </div>
           <div class="modal-footer">
+            <label id="signup-feedback">{{signupFeedback}}</label>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <input type="submit" value="Sign up" class="btn btn-primary" signin-btn/>
           </div>

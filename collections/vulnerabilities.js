@@ -1,7 +1,11 @@
 Vulnerabilities = Collections.create("vulnerabilities", {
-  ethId: {
+  user: {
     type: String,
-    label: "Ethereum security ID"
+    optional: true
+  },
+  accepted: { //maybe better to have acceptedAt type: Date ?
+    type: Boolean, 
+    defaultValue: false
   },
   title: {
     type: String
@@ -14,9 +18,15 @@ Vulnerabilities = Collections.create("vulnerabilities", {
       }
     }
   },
+  ethId: {
+    type: String,
+    label: "Ethereum security ID",
+    optional: true
+  },
   score: {
     type: Number,
-    defaultValue: 0
+    defaultValue: 0,
+    optional: true
   },
   valueUsd: {
     type: Number,
@@ -38,6 +48,23 @@ Vulnerabilities = Collections.create("vulnerabilities", {
           }
         }
       }
-    })]
+    })],
+    optional: true
+  },
+  createdAt: {
+    type: Date,
+    optional: true
   }
-});
+}, {autoPublish: false});
+
+if(Meteor.isServer){
+  Meteor.publish("vulnerabilities", function(){
+    return Vulnerabilities.find({$or: [{
+      accepted: true
+    }, {
+      user: this.userId
+    }]});
+  });
+}else{
+  Meteor.subscribe("vulnerabilities");
+}

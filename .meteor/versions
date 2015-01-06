@@ -39,6 +39,7 @@ iron:location@1.0.6
 iron:middleware-stack@1.0.6
 iron:router@1.0.6
 iron:url@1.0.6
+jesus666:admin@1.0.9
 jquery@1.0.2
 json@1.0.2
 launch-screen@1.0.1
@@ -80,4 +81,3 @@ underscore@1.0.2
 url@1.0.3
 webapp@1.1.5
 webapp-hashing@1.0.2
-yogiben:admin@1.0.9
