@@ -2,7 +2,11 @@ Accounts.config({sendVerificationEmail: true});
 
 Accounts.validateLoginAttempt(function(opt){
   if(opt.type == "password"){
+    if (!opt.user) {
+      return false
+    } else {
     return opt.user.emails[0].verified;
+    }
   }else{
     return true;
   }
