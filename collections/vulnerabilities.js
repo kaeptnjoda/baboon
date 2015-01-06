@@ -8,7 +8,8 @@ Vulnerabilities = Collections.create("vulnerabilities", {
     defaultValue: false
   },
   title: {
-    type: String
+    type: String,
+    max: 100
   },
   description: {
     type: String,
