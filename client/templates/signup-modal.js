@@ -42,13 +42,15 @@ Template.signupModal.events({
           // login attempt since user has not verified email yet.
         case "Login forbidden" :
           clearModal();
+          UI.setTextFeedback("Thank you!", "Please check email to verify signup.",{
+            type: "alert-success"
+          });
           break;
         default:
           console.log(err);
           Session.set("signupFeedback", "Error. Please try again.");
         }
       } else {
-        // TODO: display some nice feedback when signup succeeds
         clearModal();
       }
     });
