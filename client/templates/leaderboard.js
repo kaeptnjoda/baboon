@@ -10,5 +10,11 @@ Template.leaderboard.helpers({
         leader: user
       };
     });
+  },
+  primaryName: function(user){
+    return (user.profile || {}).name || user.username;
+  },
+  secondaryName: function(user){
+    return (user.profile || {}).name ? "@" + user.username : "";
   }
 });

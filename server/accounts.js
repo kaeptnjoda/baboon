@@ -3,7 +3,7 @@ Accounts.config({sendVerificationEmail: true});
 Accounts.validateLoginAttempt(function(opt){
   if(opt.type == "password"){
     if (!opt.user) {
-      return false
+      return false;
     } else {
     return opt.user.emails[0].verified;
     }
@@ -26,11 +26,16 @@ Accounts.onCreateUser(function(options,user){
 
     if (result.error) throw result.error;
 
-    user.emails = result.data.email ? [{address: result.data.email, verified: true}] : [];
+    _.extend(user, {
+      emails: result.data.email ? [{address: result.data.email, verified: true}] : [],
+      username: result.data.login,
+      profile: {
+        name: result.data.name,
+        avatarUrl: result.data.avatar_url,
+        githubUrl: result.data.html_url
+      }
+    });
 
-    user.username = result.data.login;
-
-    //user.profile = _.pick(result.data, "name");
   }
 
   return user;

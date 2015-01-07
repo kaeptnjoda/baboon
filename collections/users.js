@@ -15,16 +15,16 @@ Meteor.users.attachSchema(new SimpleSchema({
   "emails.$.verified": {
     type: Boolean
   },
-  avatarUrl: {
-    type: String,
-    optional: true
-  },
   createdAt: {
     type: Date
   },
   profile: {
     type: new SimpleSchema({
       name: {
+        type: String,
+        optional: true
+      },
+      avatarUrl: {
         type: String,
         optional: true
       }
@@ -80,7 +80,7 @@ if(Meteor.isServer){
         username: 1,
         badges: 1,
         points: 1,
-        avatarUrl: 1
+        profile: 1
       }
     });
   });
