@@ -1,0 +1,42 @@
+/*this realy should be generic modal styling*/
+#signup-modal{
+  .modal-content{
+    border-radius: 0;
+    border: 0;
+  }
+  h4{
+    text-transform: uppercase;
+  }
+  .col-md-6:first-child{
+    border-right: 1px solid #e5e5e5;
+    &:after{
+      position: absolute;
+      right: -9px;
+      top: 105px;
+      content: "or";
+      background-color: #fff;
+      z-index:2;
+      font-weight: bold;
+    }
+  }
+  .oauth-buttons{
+    top: 95px;
+    position: relative;
+  }
+  .modal-header{
+    background-color: #4e4e4e;
+    color: #fff;
+  }
+  .close{
+    font-size: 26px;
+    color: #fff;
+    text-shadow: none;
+    opacity: 1;
+  }
+}
+
+#signup-feedback{
+  display:block;
+  text-align: center;
+  margin-top: 10px;
+}

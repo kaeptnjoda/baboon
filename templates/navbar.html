@@ -3,19 +3,21 @@
     <div class="navbar-inner">
       <div class="container">
         <div class="row">
-          <div class="col-md-5 clearfix">
+          <div class="col-md-5 col-lg-4 clearfix">
             <div class="navbar-header">
-              {{#linkTo route="home" class="navbar-brand"}}
+              {{#linkTo route="home" class="navbar-brand text-center"}}
                 <img src="/images/navbar-logo.svg" class="img-responsive"/>
               {{/linkTo}}
             </div>
           </div>
-          <div class="col-md-7 clearfix">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#leaderboard">Leaderboard</a></li>
+          <div class="col-md-7 col-lg-8 clearfix">
+            <ul class="nav navbar-nav">
+              <li><a href="/#leaderboard">Leaderboard</a></li>
               <li><a href="#bounties">Bounties</a></li>
               <li><a href="#rules">Rules</a></li>
               <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
               {{#if currentUser}}
                 <li>
                   <a signout-btn>

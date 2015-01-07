@@ -3,28 +3,36 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <form>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="signup-email">Email</label>
-              <input type="email" name="email" class="form-control" id="signup-email" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="signup-username">User</label>
-              <input type="username" name="username" class="form-control" id="signup-username" placeholder="Optional - can be left empty">
-            </div>
-            <div class="form-group">
-              <label for="signup-password">Password</label>
-              <input type="password" name="password" class="form-control" id="signup-password" placeholder="Enter password">
-            </div>
-            <div class="form-group">
-              <label for="signup-password-confirm">Confirm Password</label>
-              <input type="password" name="password-confirm" class="form-control" id="signup-password-confirm" placeholder="Enter password again">
-            </div>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center">Sign up</h4>
           </div>
-          <div class="modal-footer">
-            <label id="signup-feedback">{{signupFeedback}}</label>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <input type="submit" value="Sign up" class="btn btn-primary" signin-btn/>
+          <div class="modal-body">
+            <div class="content-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="username" name="username" class="form-control" id="signup-username" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" class="form-control" id="signup-email" placeholder="Email Address">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" class="form-control" id="signup-password" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password-confirm" class="form-control" id="signup-password-confirm" placeholder="Confirm password">
+                  </div>
+                  <input type="submit" value="Sign up" class="btn btn-primary btn-block" signin-btn/>
+                  <label id="signup-feedback">{{signupFeedback}}</label>
+                </div>
+                <div class="col-md-6">
+                  <div class="oauth-buttons">
+                    {{> githubSigninBtn}}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </form>
       </div>
