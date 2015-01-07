@@ -1,30 +1,40 @@
 <template name="leaderboard">
-  <section id="leaderboard">
+  <section id="leaderboard" class="highlight">
     <div class="container">
-      <div class="col-md-1">
-      </div>
-      <div class="col-md-10">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h1>Leaderboard</h1>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Leaderboard</h1>
+          
           {{#if leaders}}
+
             <table class="table table-striped">
               {{#each leaders}}
                 <tr>
-                  <td>
-                    {{i}}
+                  <td class="center-aligned position">
+                    {{i}}.
                   </td>
-                  <td class="center-aligned">
-                    <img src="{{leader.avatarUrl}}"/>
+                  <td class="center-aligned avatar">
+                    <img src="{{avatarUrlFor leader}}"/>
                   </td>
-                  <td class="left-aligned">
-                    {{leader.username}}
+                  <td class="left-aligned profile expand">
+                    <div class="username">
+                      <div class="primary">
+                        <span>{{primaryName leader}}</span>
+                      </div>
+                      <div class="secondary">
+                        <a class="plain" href="{{leader.profile.githubUrl}}">{{secondaryName leader}}</a>
+                        <div class="points">
+                          {{leader.points}}
+                        </div>
+                      </div>
+                    </div>
                   </td>
-                  <td class="right-aligned">
-                    {{leader.points}}
-                  </td>
-                  <td class="right-aligned">
+                  <td class="badges">
+                    <img src="favicon.png"/>
+                    <img src="favicon.png"/>
+                    <img src="favicon.png"/>
+                    <img src="favicon.png"/>
+                    <img src="favicon.png"/>
                     {{#each leader.badges }}
                       {{> badgeImage badge }}
                     {{/each}}
@@ -32,14 +42,13 @@
                 </tr>
               {{/each}}
             </table>
+
           {{else}}
             <p>
               There currently are no bounty hunters
             </p>
           {{/if}}
         </div>
-      </div>
-      <div class="col-md-1">
       </div>
     </div>
   </section>

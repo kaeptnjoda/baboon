@@ -1,11 +1,58 @@
+@import "mixins.less";
+
 #leaderboard{
   td {
-    height: 100px;
-    font-size: 20px;
-    
+    padding: 10px 0;
     img{
-      max-height: 100px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &.position{
+      width: 40px;
+      font-size: 20px;
+    }
+    &.avatar{
+      .fitCellToContent();
+    }
+    &.profile{
+      padding: 10px 10px;
+      .primary{
+        font-size: 18px;
+        color: #209910;
+      }
+      .secondary{
+        font-size: 12px;
+        color: inherit;
+        &:after{
+          content: "";
+          display: block;
+          overflow: hidden;
+          height: 1.1em;
+          border-bottom: 1px dotted;
+        }  
+        a{
+          float: left;
+          padding: 0 .4em 0 0;
+        }
+      }
+      .points{
+        float: right;
+        font-size: 20px;
+        margin-top: -0.45em;
+        padding-left: 0.3em;
+      }
+    }
+    &.badges{
+      .fitCellToContent();
+      
     }
   }
-  
+
+  table {
+    background-color: #fff;
+    tr:nth-child(odd){
+      background-color: #f8f8f8;
+    }
+  }
 }

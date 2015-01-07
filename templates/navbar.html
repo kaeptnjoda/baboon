@@ -1,20 +1,20 @@
 <template name="navbar">
-  <nav class="navbar navbar-default">
+  <nav id="navbar" class="navbar navbar-inverse">
     <div class="navbar-inner">
       <div class="container">
         <div class="row">
           <div class="navbar-header">
             {{#linkTo route="home" class="navbar-brand"}}
-              Ethereum bughunting hub
+              <img src="images/navbar-logo.svg" height="21" />
             {{/linkTo}}
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
               {{#if currentUser}}
                 <li>
-                  <button class="btn btn-default navbar-btn" signout-btn>
+                  <a signout-btn>
                     Sign out
-                  </button>
+                  </a>
                 </li>
                 {{#if isAdmin}}
                   <li>
@@ -23,9 +23,9 @@
                 {{/if}}
               {{else}}
                 <li>
-                  <button class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signup-modal">
+                  <a data-toggle="modal" data-target="#signup-modal">
                     Sign up
-                  </button>
+                  </a>
                 </li>
                 <li class="divider-vertical"></li>
                 <li class="dropdown">

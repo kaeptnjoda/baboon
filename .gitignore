@@ -1,3 +1,4 @@
 packages/
 config/*
 todo.org
+.DS_Store
