@@ -22,7 +22,7 @@ Template.signupModal.events({
     }
 
     if (password !== passwordConfirm) {
-      Session.set("signupFeedback", "Passwords do not match.");
+      Session.set("signupFeedback", "Passwords do not match ");
       return
     }
     Accounts.createUser({
@@ -33,22 +33,22 @@ Template.signupModal.events({
       if (err) {
         switch (err.reason) {
         case "Username already exists." :
-          Session.set("signupFeedback", "Username already in use. Please choose another.");
+          Session.set("signupFeedback", "Username already in use. Please choose another ");
           break;
         case "Email already exists." :
-          Session.set("signupFeedback", "Email already in use. Please choose another.");
+          Session.set("signupFeedback", "Email already in use. Please choose another ");
           break;
           // Assume this means successful user creation and ignore automatic
           // login attempt since user has not verified email yet.
         case "Login forbidden" :
           clearModal();
-          UI.setTextFeedback("Thank you!", "Please check email to verify signup.",{
+          UI.setTextFeedback("Thank you!", "Please check email to verify signup ",{
             type: "alert-success"
           });
           break;
         default:
           console.log(err);
-          Session.set("signupFeedback", "Error. Please try again.");
+          Session.set("signupFeedback", "Error. Please try again ");
         }
       } else {
         clearModal();
