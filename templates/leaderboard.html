@@ -14,12 +14,14 @@
                     {{i}}.
                   </td>
                   <td class="center-aligned avatar">
-                    <img src="{{avatarUrlFor leader}}"/>
+                    {{#linkTo route="userProfile" data=leader}}
+                      <img src="{{avatarUrlFor leader}}"/>
+                    {{/linkTo}}
                   </td>
                   <td class="left-aligned profile expand">
                     <div class="username">
                       <div class="primary">
-                        {{#linkTo route="userProfile"}}
+                        {{#linkTo route="userProfile" data=leader}}
                           <span>{{primaryName leader}}</span>
                         {{/linkTo}}
                       </div>

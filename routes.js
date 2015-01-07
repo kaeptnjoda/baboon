@@ -3,9 +3,9 @@ Router.route("/", function(){
 }, { name: "home" });
 
 Router.route("/vulnerability/new", function(){
-  this.render("new-vulnerability-page");
+  this.render("newVulnerabilityPage");
 }, { name: "newVulnerability" });
 
 Router.route("/users/:_id", function(){
-  this.render("user-profile-page", {data: Meteor.users.findOne(this.params._id)});
+  this.render("userProfilePage", {data: Meteor.users.findOne(this.params._id)});
 }, { name: "userProfile" });
