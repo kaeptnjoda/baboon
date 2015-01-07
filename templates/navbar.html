@@ -3,12 +3,14 @@
     <div class="navbar-inner">
       <div class="container">
         <div class="row">
-          <div class="navbar-header">
-            {{#linkTo route="home" class="navbar-brand"}}
-              <img src="/images/navbar-logo.svg" height="21" />
-            {{/linkTo}}
+          <div class="col-md-5 clearfix">
+            <div class="navbar-header">
+              {{#linkTo route="home" class="navbar-brand"}}
+                <img src="/images/navbar-logo.svg" class="img-responsive"/>
+              {{/linkTo}}
+            </div>
           </div>
-          <div class="collapse navbar-collapse">
+          <div class="col-md-7 clearfix">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#leaderboard">Leaderboard</a></li>
               <li><a href="#bounties">Bounties</a></li>
@@ -37,8 +39,10 @@
                   <div class="dropdown-menu panel panel-default">
                     <div class="panel-body">
                       <form method="post" accept-charset="UTF-8" signin-form>
-                        <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="nav-signin-username" name="username">
-                        <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="nav-signin-password" name="password">
+                        <div class="form-group">
+                          <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="nav-signin-username" name="username" class="form-control">
+                          <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="nav-signin-password" name="password" class="form-control">
+                        </div>
                         <input type="submit" value="Sign in" class="btn btn-default btn-block" signin-btn/>
                       </form>
                       <div class="text-center">
