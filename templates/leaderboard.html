@@ -19,7 +19,9 @@
                   <td class="left-aligned profile expand">
                     <div class="username">
                       <div class="primary">
-                        <span>{{primaryName leader}}</span>
+                        {{#linkTo route="userProfile"}}
+                          <span>{{primaryName leader}}</span>
+                        {{/linkTo}}
                       </div>
                       <div class="secondary">
                         <a class="plain" href="{{leader.profile.githubUrl}}">{{secondaryName leader}}</a>
