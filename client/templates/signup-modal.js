@@ -8,16 +8,16 @@ Template.signupModal.events({
     username = tmpl.$("[name=username]").val();
 
     if (username === "") {
-      username = email;
+      return Session.set("signupFeedback", "Please provide a username.");
     }
 
     if (email === "") {
-      Session.set("signupFeedback", "Please enter email ");
+      Session.set("signupFeedback", "Please provide an email address.");
       return
     }
 
     if (password === "") {
-      Session.set("signupFeedback", "Please enter password ");
+      Session.set("signupFeedback", "Please provide a password.");
       return
     }
 
