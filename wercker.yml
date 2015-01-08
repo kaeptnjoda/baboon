@@ -1,0 +1,21 @@
+box: wercker/default
+build:
+  steps:
+    - script:
+        name: meteor build
+        code: |-
+          meteor build build/
+deploy:
+  steps:
+    - add-to-known_hosts:
+        hostname: $TARGET_HOSTNAME
+    - add-ssh-key:
+        keyname: bounty
+    - script:
+        name: deploy the bundle
+        code: |-
+          scp build/baboon.tar.gz $TARGET_USER@$TARGET_HOSTNAME:~
+          ssh $TARGET_USER@$TARGET_HOSTNAME "tar -xzf baboon.tar.gz"
+          ssh $TARGET_USER@$TARGET_HOSTNAME "cd bundle/programs/server/ && npm install"
+          ssh $TARGET_USER@$TARGET_HOSTNAME "pm2 startOrRestart ~/bounty.json"
+        
