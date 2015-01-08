@@ -5,7 +5,6 @@ build:
         name: install meteor
         code: |-
           curl https://install.meteor.com | /bin/sh
-  steps:
     - script:
         name: meteor build
         code: |-
