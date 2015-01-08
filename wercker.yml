@@ -4,6 +4,8 @@ build:
     - script:
         name: meteor build
         code: |-
+          echo "Meteor version:"
+          meteor --version
           meteor update
           meteor build build/
 deploy:
