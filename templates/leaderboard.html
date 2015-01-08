@@ -15,7 +15,7 @@
                   </td>
                   <td class="center-aligned avatar">
                     {{#linkTo route="userProfile" data=leader}}
-                      <img src="{{avatarUrlFor leader}}"/>
+                      <img src="{{avatarUrlFor leader}}" class="avatar"/>
                     {{/linkTo}}
                   </td>
                   <td class="left-aligned profile expand">
@@ -34,11 +34,11 @@
                     </div>
                   </td>
                   <td class="badges">
-                    <img src="favicon.png"/>
-                    <img src="favicon.png"/>
-                    <img src="favicon.png"/>
-                    <img src="favicon.png"/>
-                    <img src="favicon.png"/>
+                    <img src="images/badges/ether_blue_lg.png"/>
+                    <img src="images/badges/ether_pink_lg.png"/>
+                    <img src="images/badges/ether_orange_lg.png"/>
+                    <img src="images/badges/ether_green_lg.png"/>
+                    <img src="images/badges/ether_purple_lg.png"/>
                     {{#each leader.badges }}
                       {{> badgeImage badge }}
                     {{/each}}
