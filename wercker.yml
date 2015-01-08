@@ -1,14 +1,10 @@
-box: wercker/default
+box: mies/meteor
 build:
-  steps:
-    - script:
-        name: install meteor
-        code: |-
-          curl https://install.meteor.com | /bin/sh
   steps:
     - script:
         name: meteor build
         code: |-
+          meteor update
           meteor build build/
 deploy:
   steps:
