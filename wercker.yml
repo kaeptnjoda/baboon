@@ -8,7 +8,7 @@ build:
     - script:
         name: meteor build
         code: |-
-          .meteor/meteor build build/
+          meteor build build/
 deploy:
   steps:
     - add-to-known_hosts:
