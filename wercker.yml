@@ -16,7 +16,7 @@ deploy:
     - add-to-known_hosts:
         hostname: $TARGET_HOSTNAME
     - add-ssh-key:
-        keyname: bounty
+        keyname: SSH_KEY
     - script:
         name: deploy the bundle
         code: |-
