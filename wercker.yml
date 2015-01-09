@@ -21,8 +21,8 @@ deploy:
         name: deploy the bundle
         code: |-
           ls build/
-          scp build/baboon.tar.gz $TARGET_USER@$TARGET_HOSTNAME:~
-          ssh $TARGET_USER@$TARGET_HOSTNAME "tar -xzf baboon.tar.gz"
+          scp build/build.tar.gz $TARGET_USER@$TARGET_HOSTNAME:~
+          ssh $TARGET_USER@$TARGET_HOSTNAME "tar -xzf build.tar.gz"
           ssh $TARGET_USER@$TARGET_HOSTNAME "cd bundle/programs/server/ && npm install"
           ssh $TARGET_USER@$TARGET_HOSTNAME "pm2 startOrRestart ~/bounty.json"
         
