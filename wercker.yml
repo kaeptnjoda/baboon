@@ -1,6 +1,4 @@
-box: wercker/default
-services:
-  - kkudryavtsev/meteor
+box: kkudryavtsev/meteor
 build:
   steps:
     - script:
