@@ -7,13 +7,21 @@ Template.navbar.events({
 
     if(username && password){
       Meteor.loginWithPassword(username, password, function(err){
-        if(err) throw new Error(err);
+        if(err) {
+          UI.setTextFeedback("Wrong user / password","Please try again", "alert-danger");
+          // throw new Error(err);
+        } else {
+          UI.setTextFeedback("Welcome!", "",{type: "alert-success"});
+          $("#nav-signing-dropdown").dropdown('toggle')
+        }
       });
     } else {
-      throw new Error("No username or password provided");
+      UI.setTextFeedback("Missing username or password","Please try again", "alert-danger");
+      // throw new Error("No username or password provided");
     }
   },
   "click [signout-btn]": function(){
     Meteor.logout();
+    UI.setTextFeedback("Signed out.", "",{type: "alert-success"});
   }
 });
