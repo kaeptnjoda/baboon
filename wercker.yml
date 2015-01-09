@@ -10,8 +10,7 @@ build:
     - script:
         name: meteor build
         code: |-
-          meteor build build/
-          ls
+          meteor build build/build.tar.gz
 deploy:
   steps:
     - add-to-known_hosts:
@@ -21,8 +20,8 @@ deploy:
     - script:
         name: deploy the bundle
         code: |-
-          ls
-          scp build/baboon.tar.gz $TARGET_USER@$TARGET_HOSTNAME:~
+          ls build/
+          scp build/build.tar.gz $TARGET_USER@$TARGET_HOSTNAME:~
           ssh $TARGET_USER@$TARGET_HOSTNAME "tar -xzf baboon.tar.gz"
           ssh $TARGET_USER@$TARGET_HOSTNAME "cd bundle/programs/server/ && npm install"
           ssh $TARGET_USER@$TARGET_HOSTNAME "pm2 startOrRestart ~/bounty.json"
