@@ -1,4 +1,6 @@
-box: mies/meteor
+box: wercker/default
+services:
+  - kkudryavtsev/meteor
 build:
   steps:
     - script:
