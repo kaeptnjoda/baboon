@@ -6,23 +6,18 @@
           <div class="profile-img"><img src="{{avatarUrlFor username}}" width="180" height="180"></div>
         </div>
         <div class="col-md-9 profile">
-          <h1>{{username}}</h1>
+          <h1>{{username}} </h1>
           <div class="points">{{points}} pts</div>
           <p class="text-justify">
             Biography. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate congue porttitor. Sed libero nunc, consequat scelerisque sem in, placerat tincidunt lacus. Morbi sed venenatis sapien, sed aliquam lectus. Vivamus sed vulputate sapien, pellentesque maximus leo. Vivamus eget nibh tincidunt, vehicula elit nec, mattis velit. Aenean accumsan et ipsum sit amet tincidunt. 
 
           </p>
-          <div class="btn-container text-center">
-            {{#if currentUser}}
-              {{#linkTo route="newVulnerability" class="btn btn-default btn-primary"}}
-                Submit a Vulnerability
-              {{/linkTo}}
-            {{else}}
-              <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#signup-modal">
-                Sign up to submit a vulnerability
-              </button>              
-            {{/if}}
-          </div>
+
+          {{#if isUserProfile _id}}
+              <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#edit-profile-modal">
+                Edit Profile
+              </button>     
+          {{/if}}
         </div>
       </div>
     </div>

@@ -12,13 +12,16 @@
           </div>
           <div class="col-md-7 col-lg-8 clearfix">
             <ul class="nav navbar-nav">
-              <li><a href="#leaderboard">Leaderboard</a></li>
-              <li><a href="#bounties">Bounties</a></li>
-              <li><a href="#rules">Rules</a></li>
-              <li><a href="#faq">FAQ</a></li>
+              <li><a href="/#leaderboard">Leaderboard</a></li>
+              <li><a href="/#bounties">Bounties</a></li>
+              <li><a href="/#rules">Rules</a></li>
+              <li><a href="/#faq">FAQ</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               {{#if currentUser}}
+                <li>
+                  <a href="/users/{{currentUser._id}}">{{currentUser.username}}</a>
+                </li>
                 <li>
                   <a signout-btn>
                     Sign out
