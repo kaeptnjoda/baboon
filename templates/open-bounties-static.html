@@ -9,6 +9,7 @@
           <li>Misaligned / unintended incentives. Flaws in game theory.</li>
           <li>Security weaknesses / attacks on the PoW algorithm.</li>
         </ul>
+        A concrete example could be a contract that consumes very little gas but leads to a lot of computational effort effectively opening the door for DoS attacks. 
         <h3><b>Client protocol implementation security</b></h3>
         Whether the Go client implementation conforms to the formal protocol specification:
         <ul>
@@ -19,9 +20,9 @@
           <li>Message calls.</li>
           <li>Calculation and enforcement of gas and fees.</li>
         </ul>
-        Bitcoin "zero-day" example requiring a hard-fork: <a href="https://en.bitcoin.it/wiki/CVE-2010-5139">https://en.bitcoin.it/wiki/CVE-2010-5139</a>
+        An example for a potential issue in this category is Bitcoin's "zero-day" flaw requiring a hard-fork: <a href="https://en.bitcoin.it/wiki/CVE-2010-5139">https://en.bitcoin.it/wiki/CVE-2010-5139</a>
         <h3><b>Network security</b></h3>
-        Generalized attacks on the whole network or a subset of it:
+        In this category, we look for generalized attacks on the whole network or a subset of it:
         <ul>
           <li>51% and other X% attacks.</li>
           <li>Finney attacks.</li>
@@ -30,7 +31,7 @@
           <li>Transaction / messages malleability.</li>
           <li>(global) DoS.</li>
         </ul>
-        Global DoS example: <a href="https://en.bitcoin.it/wiki/CVE-2012-4684">https://en.bitcoin.it/wiki/CVE-2012-4684</a>
+        Fro a global network based DoS example look at: <a href="https://en.bitcoin.it/wiki/CVE-2012-4684">https://en.bitcoin.it/wiki/CVE-2012-4684</a>
         <h3><b>Node security</b></h3>
         Attacks on a single Go client relating to the Ethereum protocol:
         <ul>
@@ -42,7 +43,7 @@
         <br>
         DoS / Resource abuse example: <a href="https://en.bitcoin.it/wiki/CVE-2013-2293">https://en.bitcoin.it/wiki/CVE-2013-2293</a>
         <h3><b>Client application security</b></h3>
-        Attacks on a single Go client exposing general Go application or library vulnerabilities:
+        This category address more classical security issues, more precisely, attacks on a single Go client exposing general Go application or library vulnerabilities:
         <ul>
           <li>Memory vulnerability (invalid memory address, nil pointers, memory not properly released).</li>
           <li>Data type (e.g. integer) overflows / wrap arounds.</li>
@@ -50,7 +51,7 @@
           <li>Concurrency: synchronization, state, races.</li>
           <li>Issues related to external libraries used.</li>
         </ul>
-        External library example: <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/</a>
+        An example for a problem hidden in an external library can be found here: <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/</a>
         <h3><b>Cryptographic primitives security</b></h3>
         Incorrect implementation / usage / configuration of:
         <ul>
