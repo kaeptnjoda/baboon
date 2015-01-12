@@ -4,14 +4,22 @@
       <div class="row">
         <h1>Open Bounties</h1>
         <h3><b>Protocol security</b></h3>
+         The idea for ethereum was initially published in the white paper (updated version). We have casted this concept into a couple of protocols and algorithms that are up for scrutinity, such as 
+         <ul>
+          <li>Block chain consensus protocol, state engine and virtual machine as specified in TBD </li>
+          <li>Encoding and merkle patricia trees as described here TBD  </li>
+          <li>Wire and p2p protocol as specified here TBD </li>
+          <li>Mining algorithm as described here TBD </li>
+        </ul>
+        Help us identifying flaws such as  
         <ul>
           <li>Conceptual security issues in the formal specification of the Ethereum protocol.</li>
-          <li>Misaligned / unintended incentives. Flaws in game theory.</li>
+          <li>Misaligned / unintended economic incentives. Flaws in game theory.</li>
           <li>Security weaknesses / attacks on the PoW algorithm.</li>
         </ul>
         A concrete example could be a contract that consumes very little gas but leads to a lot of computational effort effectively opening the door for DoS attacks. 
         <h3><b>Client protocol implementation security</b></h3>
-        Whether the Go client implementation conforms to the formal protocol specification:
+        We will release the genesis block together with our Go client. Assuming, protocols and algorithms are flawless: Does the Go client implementation (link TBD) conforms to the formal protocol specification. Issues could include:
         <ul>
           <li>Validations of blocks, transactions and messages.</li>
           <li>Ethereum Virtual Machine code execution.</li>
