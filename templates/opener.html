@@ -8,13 +8,21 @@
         <div class="col-md-6">
           <h1>ETHEREUM Bounty Program</h1>
           <p class="text-justify">
-            Take part in securing the Ethereum platform. Earn cold hard cash for finding a vulnerability, and get a place on our leaderboard, as well as a personal entry in the Ethereum genesis block.
+            Ethereum has a clear goal: Delivering stable protocols and secure software upon genesis block release.  
+            We call out to our community and all bug bounty hunters: Help us delivering flawless protocols and clients, earn cold hard cash for finding a vulnerability, and get a place on our leaderboard, as well as a personal entry in the Ethereum genesis block.
           </p>
           <div class="btn-container text-center">
             {{#if currentUser}}
-              {{#linkTo route="newVulnerability" class="btn btn-default btn-primary"}}
-                Submit a Vulnerability
-              {{/linkTo}}
+              {{#if submissionAllowed }}
+                {{#linkTo route="newVulnerability" class="btn btn-default btn-primary"}}
+                  Submit a Vulnerability
+                {{/linkTo}}
+              {{else}}
+                <p class="text-danger text-justify">
+                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                  <span>You have reached your maximum number of submissions. Please wait until they get reviewed by someone in our team before submitting any more vulnerabilities.</span>
+                </p>
+              {{/if}}
             {{else}}
               <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#signup-modal">
                 Sign up to submit a vulnerability

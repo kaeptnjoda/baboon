@@ -3,7 +3,9 @@ AutoForm.hooks({
     after: {
       submitVulnerability: function(err, res){
         if(err){
-          UI.setTextFeedback("Error","Vulnerability submission failed", "alert-danger");
+          UI.setTextFeedback("Error",err.reason || "Vulnerability submission failed",{
+            type: "alert-danger"
+          });
         }else{
           Router.go("/");
           UI.setTextFeedback("Thank you!", "Vulnerability has been submitted",{

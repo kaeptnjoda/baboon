@@ -9,6 +9,14 @@ _.each({
   },
   avatarUrlFor: function(user){
     return (user.profile || {}).avatarUrl || "/images/timthumb.png";
+  },
+  submissionAllowed: function(){
+    var max = ((Meteor.settings || {}).public || {}).MAX_PENDING_SUBMISSIONS || 10;
+
+    return Meteor.userId() && (Vulnerabilities.find({
+      user: Meteor.userId(),
+      accepted: false
+    }).count() < max);    
   }
 }, function(fn, name){
   Template.registerHelper(name, fn);
