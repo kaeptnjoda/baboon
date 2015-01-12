@@ -74,8 +74,8 @@ This way the app's html becomes very modular and easy to restructure.
 Env var settings are not part of the repo and not going to be (for security reasons). You'll need to add the config file manually. To do that create a `config/settings.json` file with your environment variables in JSON format e.g.
 ```js
 {
-  "githubClientId": "abc123",
-  "githubSecret": "xyz098"
+  "GITHUB_CLIENT_ID": "abc123",
+  "GITHUB_SECRET": "xyz098"
 }
 ```
 then run meteor with

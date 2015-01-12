@@ -13,9 +13,16 @@
           </p>
           <div class="btn-container text-center">
             {{#if currentUser}}
-              {{#linkTo route="newVulnerability" class="btn btn-default btn-primary"}}
-                Submit a Vulnerability
-              {{/linkTo}}
+              {{#if submissionAllowed }}
+                {{#linkTo route="newVulnerability" class="btn btn-default btn-primary"}}
+                  Submit a Vulnerability
+                {{/linkTo}}
+              {{else}}
+                <p class="text-danger text-justify">
+                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                  <span>You have reached your maximum number of submissions. Please wait until they get reviewed by someone in our team before submitting any more vulnerabilities.</span>
+                </p>
+              {{/if}}
             {{else}}
               <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#signup-modal">
                 Sign up to submit a vulnerability
