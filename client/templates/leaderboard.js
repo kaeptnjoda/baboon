@@ -1,6 +1,6 @@
 Template.leaderboard.helpers({
   leaders: function(){
-    return _.map(Meteor.users.find({}, {
+    return _.map(Meteor.users.find({ points: { $gt: 0 }}, {
       sort: {
         points: -1
       }
