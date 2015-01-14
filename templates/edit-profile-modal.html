@@ -16,24 +16,22 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="username" name="username" class="form-control" id="signup-username" placeholder="Username" value="{{currentUser.username}}">
+                    <input type="username" name="username" class="form-control" id="edit-username" placeholder="Username" value="{{currentUser.username}}">
+                  </div>
+                  <div class="form-group">x
+                    <input type="email" name="email" class="form-control" id="edit-email" placeholder="Email Address" value="{{email}}">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" class="form-control" id="signup-email" placeholder="Email Address" value="{{email}}">
+                    <input type="password" name="password" class="form-control" id="edit-password" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" class="form-control" id="signup-password" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" name="password-confirm" class="form-control" id="signup-password-confirm" placeholder="Confirm password">
+                    <input type="password" name="password-confirm" class="form-control" id="edit-password-confirm" placeholder="Confirm password">
                   </div>
                   <textarea placeholder="Biography"></textarea>
                   <input type="submit" value="Update" class="btn btn-primary btn-block" signin-btn/>
 
-                  <label id="signup-feedback">{{signupFeedback}}</label>
+                  <label id="edit-feedback">{{editFeedback}}</label>
                 </div>
-                
-                
               </div>
             </div>
           </div>

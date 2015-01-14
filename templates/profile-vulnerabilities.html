@@ -1,28 +1,24 @@
 <template name="profileVulnerabilities">
   <section id="profile-vulnerabilities" class="highlight">
-  	 <div class="container">
+  	<div class="container">
       <div class="row">
-        <div class="col-md-3 badges">
-        	<h1>Badges</h1>
-        	<div class="eth-badge">
-        		<div class="icon-large pink"></div>
-        		<div class="bounty">Network Security</div>
-        	</div>
-        </div>
         <div class="col-md-9 vulnerabilities">
-        	<h1>Vulnerabilities Discovered</h1>
-        	<div class="vulnerability">
-        		<a href="#">Vulnerability Name</a>
-        		<div class="points">150 pts</div>
-        		<div class="date-reported"><B>Reported:</B> Jan 15, 2015</div>
-        		<div class="eth-badge">
-        			<div class="icon-small pink"></div>
-        		</div>
-        		<P class="description">Vulnerability. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate congue porttitor. Sed libero nunc, consequat scelerisque sem in, placerat tincidunt lacus. Morbi sed venenatis sapien, sed aliquam lectus. Vivamus sed vulputate sapien, pellentesque maximus leo. Vivamus eget nibh tincidunt, vehicula elit nec, mattis velit. Aenean accumsan et ipsum sit amet tincidunt.</P>
+          <h1>Vulnerabilities Discovered {{_id}}</h1>
+          {{#each uservulns userid}}
+          <div class="vulnerability">
+        	<a href="#">{{ethId}} - {{title}}</a>
+        	<div class="eth-badge">
+              {{#each badges }}
+              {{> badgeImage badge }}
+              {{/each}}
         	</div>
-
+        	<div class="points">{{score}} pts</div>
+        	<div class="date-reported"><b>Reported: </b>{{createdAt}}</div>
+        	<div class="description"><p>{{description}}</p></div>
+          </div>
+        {{/each}}
         </div>
       </div>
-     </div>
+    </div>
   </section>
 </template>

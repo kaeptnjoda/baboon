@@ -1,4 +1,4 @@
-Template.profileOpener.helpers({
+Template.profile.helpers({
   isUserProfile: function(profileid){
   	var user = Meteor.user();
 
