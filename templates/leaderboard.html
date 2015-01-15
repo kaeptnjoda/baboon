@@ -14,12 +14,16 @@
                     {{i}}.
                   </td>
                   <td class="center-aligned avatar">
-                    <img src="{{avatarUrlFor leader}}"/>
+                    {{#linkTo route="userProfile" data=leader}}
+                      <img src="{{avatarUrlFor leader}}" class="avatar"/>
+                    {{/linkTo}}
                   </td>
                   <td class="left-aligned profile expand">
                     <div class="username">
                       <div class="primary">
-                        <span>{{primaryName leader}}</span>
+                        {{#linkTo route="userProfile" data=leader}}
+                          <span>{{primaryName leader}}</span>
+                        {{/linkTo}}
                       </div>
                       <div class="secondary">
                         <a class="plain" href="{{leader.profile.githubUrl}}">{{secondaryName leader}}</a>

@@ -3,5 +3,9 @@ Router.route("/", function(){
 }, { name: "home" });
 
 Router.route("/vulnerability/new", function(){
-  this.render("new-vulnerability-page");
+  this.render("newVulnerabilityPage");
 }, { name: "newVulnerability" });
+
+Router.route("/users/", function(){
+  this.render("userProfilePage");
+}, { name: "userProfile" });

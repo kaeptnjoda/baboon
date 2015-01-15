@@ -1,0 +1,28 @@
+<template name="profile">
+  <section id="profile">
+    <div class="container">
+      {{#each users}}
+      <div class="row">
+        <div class="col-md-3">
+          <div class="profile-img"><img src="{{profile.avatarUrl}}" width="180" height="180"></div>
+        </div>
+        <div class="col-md-9 profile">
+          <h1>{{username}} </h1>
+          {{#each badges }}
+          {{> badgeImage badge }}
+          {{/each}}
+          <div class="points">{{points}} pts</div>
+          {{#if isUserProfile _id}}
+              <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#edit-profile-modal">
+                Edit Profile
+              </button>     
+          {{/if}}
+        </div>
+        {{#with userid=_id }}
+        {{> profileVulnerabilities}}
+        {{/with}}
+      </div>
+      {{/each}}
+    </div>
+  </section>
+</template>

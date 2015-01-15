@@ -4,6 +4,15 @@ _.each({
 
     return user && _.contains(user.roles, "admin");
   },
+  users: function(){
+    return Meteor.users.find({ points: { $gt: 0 }});
+  },
+  uservulns: function(userid){
+    return Vulnerabilities.find({
+      user: userid,
+      accepted: true
+    });
+  },
   badgeImage: function(id){
     return Badges.findOne(id).imageUrl;
   },
@@ -21,5 +30,3 @@ _.each({
 }, function(fn, name){
   Template.registerHelper(name, fn);
 });
-
-

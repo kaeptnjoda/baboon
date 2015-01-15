@@ -27,6 +27,10 @@ Meteor.users.attachSchema(new SimpleSchema({
       avatarUrl: {
         type: String,
         optional: true
+      },
+      bio:{
+        type: String,
+        optional: true
       }
     }),
     optional: true
