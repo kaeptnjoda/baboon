@@ -17,7 +17,7 @@ _.each({
     return Badges.findOne(id).imageUrl;
   },
   avatarUrlFor: function(user){
-    return (user.profile || {}).avatarUrl || "/images/timthumb.png";
+    return (user && (user.profile || {}).avatarUrl) || "/images/timthumb.png";
   },
   submissionAllowed: function(){
     var max = ((Meteor.settings || {}).public || {}).MAX_PENDING_SUBMISSIONS || 10;

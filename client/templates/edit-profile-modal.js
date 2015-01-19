@@ -18,14 +18,8 @@ Template.editProfileModal.helpers({
   signupFeedback: function () {
     return Session.get("editProfile");
   },
-  email: function(){
-    var email,
-    emails = Meteor.user().emails;
-    
-    if(Array.isArray(emails)){
-      var email = [0].address;
-    }
-    return email;
+  email: function(user){
+    return user && ((user.emails || [])[0] || {}).address;
   }
 });
 
