@@ -1,6 +1,6 @@
 AdminConfig = {
   name: "Baboon",
-  adminEmails: ["konstantin@ethdev.com", "bob@bob.com", "gustav@ethdev.com"],
+  adminEmails: ["konstantin@ethdev.com", "bob@bob.com", "gustav@ethdev.com", "konstantin.k.ed@gmail.com"],
   dashboard: {
     skin: "blue"
   },

@@ -6,6 +6,6 @@ Router.route("/vulnerability/new", function(){
   this.render("newVulnerabilityPage");
 }, { name: "newVulnerability" });
 
-Router.route("/users/", function(){
-  this.render("userProfilePage");
+Router.route("/users/:_id", function(){
+  this.render("userProfilePage", {data: Meteor.users.findOne(this.params._id)});
 }, { name: "userProfile" });
