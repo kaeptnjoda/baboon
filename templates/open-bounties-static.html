@@ -3,14 +3,12 @@
     <div class="container">
       <div class="row">
         <h1>Open Bounties</h1>
-        Our bug bounty program spans e2e: From Soundness of protocols (such as blockchain consensus, wire and p2p, proof of work, ...) and protocol/implementation compliance to network security and consensus integrity. Of course, more classical client security as well as security of cryptographic primitives form also part of the program.  
+        Our bug bounty program spans e2e: From Soundness of protocols (such as blockchain consensus, wire and p2p, proof of work, ...) and protocol/implementation compliance to network security and consensus integrity. Of course, more classical client security as well as security of cryptographic primitives form also part of the program. Please have a look at <a href="https://github.com/ethereum/wiki/wiki/Security-Categorization">https://github.com/ethereum/wiki/wiki/Security-Categorization</a> for our security goals. For details on the scope, see below. 
         <h3><b>Protocol security</b></h3>
-         The idea for ethereum was initially published in the white paper (updated version). We have casted this concept into a couple of protocols and algorithms that are up for scrutiny, such as 
+         The idea for ethereum was initially published in the white paper <a href="https://github.com/ethereum/wiki/wiki/White-Paper">https://github.com/ethereum/wiki/wiki/White-Paper</a>  . We have casted this concept into a couple of protocols and algorithms that are up for scrutiny, such as 
          <ul>
-          <li>Block chain consensus protocol, state engine and virtual machine as specified in TBD </li>
-          <li>Encoding and merkle patricia trees as described here TBD  </li>
-          <li>Wire and p2p protocol as specified here TBD </li>
-          <li>Mining algorithm as described here TBD </li>
+          <li>Block chain consensus protocol, state engine and virtual machine as well as encoding and Merkle Patricia trees as specified in <a href="http://gavwood.com/Paper.pdf">http://gavwood.com/Paper.pdf</a> </li>
+          <li>Wire and p2p protocol as well as mining algorithm are still undergoing changes. Reference to be published soon here.</li>
         </ul>
         Help us identifying flaws such as  
         <ul>
@@ -19,8 +17,11 @@
           <li>Security weaknesses / attacks on the PoW algorithm.</li>
         </ul>
         A concrete example could be a contract that consumes very little gas but leads to a lot of computational effort effectively opening the door for DoS attacks. 
-        <h3><b>Client protocol implementation security</b></h3>
-        We will release the genesis block together with our Go client. Assuming, protocols and algorithms are flawless: Does the Go client implementation (link TBD) conforms to the formal protocol specification. Issues could include:
+        <h3><b>Implementation security</b></h3>
+        We will release the genesis block together with our Go client. Please have a look at the references for a link to the code base.
+Please note that no reward will be payout for bug identified in the related components. We will make timely announcements, once the implementation is fully finalized
+        <h4><b>Client protocol implementation security</b></h4>
+        Assuming, protocols and algorithms are flawless: Does the Go client implementation conforms to the formal protocol specification. Issues could include:
         <ul>
           <li>Validations of blocks, transactions and messages.</li>
           <li>Ethereum Virtual Machine code execution.</li>
@@ -30,7 +31,7 @@
           <li>Calculation and enforcement of gas and fees.</li>
         </ul>
         An example for a potential issue in this category is Bitcoin's "zero-day" flaw requiring a hard-fork: <a href="https://en.bitcoin.it/wiki/CVE-2010-5139">https://en.bitcoin.it/wiki/CVE-2010-5139</a>
-        <h3><b>Network security</b></h3>
+        <h4><b>Network security</b></h4>
         In this category, we look for generalized attacks on the whole network or a subset of it:
         <ul>
           <li>51% and other X% attacks.</li>
@@ -41,7 +42,7 @@
           <li>(global) DoS.</li>
         </ul>
         Fro a global network based DoS example look at: <a href="https://en.bitcoin.it/wiki/CVE-2012-4684">https://en.bitcoin.it/wiki/CVE-2012-4684</a>
-        <h3><b>Node security</b></h3>
+        <h4><b>Node security</b></h4>
         Attacks on a single Go client relating to the Ethereum protocol:
         <ul>
           <li>DoS / resource abuse.</li>
@@ -51,7 +52,7 @@
         DoS example: <a href="https://bitcointalk.org/index.php?topic=287351">https://bitcointalk.org/index.php?topic=287351</a>
         <br>
         DoS / Resource abuse example: <a href="https://en.bitcoin.it/wiki/CVE-2013-2293">https://en.bitcoin.it/wiki/CVE-2013-2293</a>
-        <h3><b>Client application security</b></h3>
+        <h4><b>Client application security</b></h4>
         This category address more classical security issues, more precisely, attacks on a single Go client exposing general Go application or library vulnerabilities:
         <ul>
           <li>Memory vulnerability (invalid memory address, nil pointers, memory not properly released).</li>
@@ -61,7 +62,7 @@
           <li>Issues related to external libraries used.</li>
         </ul>
         An example for a problem hidden in an external library can be found here: <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/</a>
-        <h3><b>Cryptographic primitives security</b></h3>
+        <h4><b>Cryptographic primitives security</b></h4>
         Incorrect implementation / usage / configuration of:
         <ul>
           <li>Elliptic curve (secp256k1, ECDSA).</li>
